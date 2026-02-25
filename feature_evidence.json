@@ -1,0 +1,148 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-design-a-visually-striking-cinematic-theme-for-the-himachali-editor-website-using-a-dark-moody-color-palette-deep-blacks-warm-golds-and-mountain-inspired-earthy-tones-bold-typography-and-full-width-hero-sections-apply-this-theme-consistently-across-all-pages-and-components",
+      "featureTitle": "Design a visually striking cinematic theme for the Himachali Editor website using a dark, moody color palette (deep blacks, warm golds, and mountain-inspired earthy tones), bold typography, and full-width hero sections. Apply this theme consistently across all pages and components.",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-landing-home-page-for-himachali-editor-that-includes-a-hero-section-with-the-brand-name-and-tagline-about-videography-shoot-editing-services-a-brief-about-section-and-clear-navigation-to-pricing-and-booking-sections",
+      "featureTitle": "Create a landing/home page for 'Himachali Editor' that includes a hero section with the brand name and tagline about videography shoot & editing services, a brief about section, and clear navigation to Pricing and Booking sections.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/AboutSection.tsx",
+        "frontend/src/components/Header.tsx",
+        "frontend/src/components/HeroSection.tsx",
+        "frontend/src/pages/LandingPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-display-a-one-time-services-pricing-section-with-the-following-four-services-and-their-prices-normal-video-editing-shoot-4-000-high-video-editing-shoot-5-000-car-delivery-shoot-2-500-bike-delivery-shoot-2-000-each-card-should-show-the-service-name-price-and-a-book-now-button",
+      "featureTitle": "Display a One-Time Services pricing section with the following four services and their prices: Normal Video Editing + Shoot (₹4,000), High Video Editing + Shoot (₹5,000), Car Delivery Shoot (₹2,500), Bike Delivery Shoot (₹2,000). Each card should show the service name, price, and a 'Book Now' button.",
+      "files": [
+        "frontend/src/components/OneTimeServicesSection.tsx",
+        "frontend/src/components/ServiceCard.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-display-a-monthly-packages-pricing-section-with-three-packages-basic-8-12-videos-normal-edit-shoot-12-000-premium-10-15-videos-high-edit-shoot-15-000-pro-10-15-videos-high-edit-shoot-social-media-management-18-000-each-package-card-should-show-the-package-name-included-deliverables-price-and-a-subscribe-button-visually-highlight-the-pro-package-as-the-most-popular-or-recommended",
+      "featureTitle": "Display a Monthly Packages pricing section with three packages: Basic (8–12 videos, Normal Edit + Shoot, ₹12,000), Premium (10–15 videos, High Edit + Shoot, ₹15,000), Pro (10–15 videos, High Edit + Shoot + Social Media Management, ₹18,000). Each package card should show the package name, included deliverables, price, and a 'Subscribe' button. Visually highlight the Pro package as the most popular or recommended.",
+      "files": [
+        "frontend/src/components/MonthlyPackagesSection.tsx",
+        "frontend/src/components/PackageCard.tsx",
+        "frontend/src/components/PricingSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-customer-authentication-system-using-internet-identity-customers-must-be-able-to-log-in-and-log-out-a-unique-customer-profile-id-should-be-associated-with-their-internet-identity-principal-and-stored-in-the-backend",
+      "featureTitle": "Implement a customer authentication system using Internet Identity. Customers must be able to log in and log out. A unique customer profile/ID should be associated with their Internet Identity principal and stored in the backend.",
+      "files": [
+        "frontend/src/components/LoginButton.tsx",
+        "frontend/src/components/ProfileSetupModal.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-an-online-booking-form-ui-when-a-logged-in-customer-clicks-book-now-or-subscribe-on-any-service-or-package-a-booking-modal-or-page-should-open-pre-filled-with-the-selected-service-package-name-the-form-should-collect-preferred-date-optional-notes-and-submit-to-the-backend-booking-api-unauthenticated-users-should-be-prompted-to-log-in-before-booking",
+      "featureTitle": "Implement an online booking form UI. When a logged-in customer clicks 'Book Now' or 'Subscribe' on any service or package, a booking modal or page should open pre-filled with the selected service/package name. The form should collect preferred date, optional notes, and submit to the backend booking API. Unauthenticated users should be prompted to log in before booking.",
+      "files": [
+        "frontend/src/components/BookingModal.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-customer-dashboard-page-accessible-only-when-logged-in-it-should-display-the-customer-s-booking-history-with-service-name-booking-date-and-status-for-each-booking",
+      "featureTitle": "Create a customer dashboard page accessible only when logged in. It should display the customer's booking history with service name, booking date, and status for each booking.",
+      "files": [
+        "frontend/src/components/BookingHistoryCard.tsx",
+        "frontend/src/pages/DashboardPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

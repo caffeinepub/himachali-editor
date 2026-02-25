@@ -1,0 +1,200 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Himachali Editor – Videography Service Website with Booking & Customer Login",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Design a visually striking cinematic theme for the Himachali Editor website using a dark, moody color palette (deep blacks, warm golds, and mountain-inspired earthy tones), bold typography, and full-width hero sections",
+      "acceptanceCriteria": [
+        "Hero section uses a full-width cinematic layout with bold headline and tagline",
+        "Color palette consistently applies dark backgrounds, gold/amber accents, and earthy tones",
+        "Typography is bold and modern throughout all sections",
+        "Theme is consistent across landing page, pricing, and booking sections"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define custom CSS variables for the cinematic theme: dark backgrounds (--bg-dark: #0a0a0a, --bg-card: #1a1a1a), warm gold accents (--gold-primary: #d4af37, --gold-accent: #f0c674), earthy tones (--earth-brown: #8b7355, --earth-gray: #4a4a4a), and bold typography settings. Apply these variables globally to establish the dark, moody color palette throughout the application."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend the Tailwind theme with custom colors matching the cinematic palette (bgDark, bgCard, goldPrimary, goldAccent, earthBrown, earthGray) and configure custom font families for bold, modern typography. Set default background and text colors to support the dark theme consistently across all components."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Create a landing/home page for 'Himachali Editor' that includes a hero section with the brand name and tagline about videography shoot & editing services, a brief about section, and clear navigation to Pricing and Booking sections",
+      "acceptanceCriteria": [
+        "Page displays 'Himachali Editor' as the brand name prominently",
+        "Hero section includes a tagline related to videography shoot & editing services",
+        "Navigation links to Pricing and Booking sections exist",
+        "Page is responsive on mobile and desktop"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "create",
+          "description": "Create a navigation header component displaying the Himachali Editor logo (using frontend/public/assets/generated/logo.dim_300x100.png), brand name, and navigation links to Home, Pricing, and Dashboard sections. Include a LoginButton component for authentication. Apply the cinematic theme with dark background and gold accents. Ensure the header is sticky and responsive."
+        },
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "create",
+          "description": "Create a full-width cinematic hero section component with the generated background image frontend/public/assets/generated/hero-bg.dim_1920x1080.png. Display 'Himachali Editor' as the prominent headline and a compelling tagline about professional videography shoot and editing services. Include a call-to-action button linking to the Pricing section. Apply bold typography and the dark, moody color palette with gold accents."
+        },
+        {
+          "path": "frontend/src/components/AboutSection.tsx",
+          "operation": "create",
+          "description": "Create a brief about section component describing Himachali Editor's videography and editing services. Use the cinematic theme with dark background and warm gold text highlights. Keep the content concise and visually engaging with the established typography."
+        },
+        {
+          "path": "frontend/src/pages/LandingPage.tsx",
+          "operation": "create",
+          "description": "Create the landing page component that composes Header, HeroSection, AboutSection, and PricingSection components. Wire this page as the default route in the application. Ensure the page flows seamlessly with the cinematic theme and is fully responsive."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Set up React Router with routes for the LandingPage (default '/'), Dashboard page ('/dashboard'), and any booking-related routes. Wrap the application with necessary providers (QueryClientProvider for React Query). Ensure the routing structure supports navigation from the Header component."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Display a One-Time Services pricing section with four services (Normal Video Editing + Shoot ₹4,000, High Video Editing + Shoot ₹5,000, Car Delivery Shoot ₹2,500, Bike Delivery Shoot ₹2,000) with Book Now buttons",
+      "acceptanceCriteria": [
+        "Four one-time service cards are displayed",
+        "Each card shows the correct service name and price in INR",
+        "A 'Book Now' button is present on each card",
+        "Section is clearly labeled as 'One-Time Services'"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ServiceCard.tsx",
+          "operation": "create",
+          "description": "Create a reusable service card component that displays service name, price in INR (₹), and a 'Book Now' button. Apply the cinematic theme with dark card backgrounds, gold borders, and hover effects. The button should trigger the booking flow by calling an onBookClick callback with the service name."
+        },
+        {
+          "path": "frontend/src/components/OneTimeServicesSection.tsx",
+          "operation": "create",
+          "description": "Create the One-Time Services pricing section component displaying four ServiceCard instances: 'Normal Video Editing + Shoot' (₹4,000), 'High Video Editing + Shoot' (₹5,000), 'Car Delivery Shoot' (₹2,500), and 'Bike Delivery Shoot' (₹2,000). Use the generated background frontend/public/assets/generated/pricing-bg.dim_1920x600.png for visual appeal. Arrange cards in a responsive grid layout. When a 'Book Now' button is clicked, pass the service name to the BookingModal."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Display a Monthly Packages pricing section with three packages (Basic ₹12,000, Premium ₹15,000, Pro ₹18,000) with Subscribe buttons and the Pro package visually highlighted",
+      "acceptanceCriteria": [
+        "Three monthly package cards are displayed",
+        "Each card shows the correct package name, video count range, included services, and price",
+        "Subscribe button is present on each card",
+        "Pro package is visually differentiated (e.g., badge, highlighted border)",
+        "Section is clearly labeled as 'Monthly Packages'"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PackageCard.tsx",
+          "operation": "create",
+          "description": "Create a reusable package card component that displays package name, video count range, list of included services, price in INR (₹), and a 'Subscribe' button. Support an optional 'isPopular' prop to apply visual highlighting (e.g., golden border, 'Most Popular' badge). Apply the cinematic theme with dark backgrounds and gold accents. The button should trigger the booking flow by calling an onSubscribeClick callback with the package name."
+        },
+        {
+          "path": "frontend/src/components/MonthlyPackagesSection.tsx",
+          "operation": "create",
+          "description": "Create the Monthly Packages pricing section component displaying three PackageCard instances: 'Basic' (8-12 videos, Normal Edit + Shoot, ₹12,000), 'Premium' (10-15 videos, High Edit + Shoot, ₹15,000), and 'Pro' (10-15 videos, High Edit + Shoot + Social Media Management, ₹18,000, marked as popular). Use the generated background frontend/public/assets/generated/pricing-bg.dim_1920x600.png. Arrange cards in a responsive grid layout. When a 'Subscribe' button is clicked, pass the package name to the BookingModal."
+        },
+        {
+          "path": "frontend/src/components/PricingSection.tsx",
+          "operation": "create",
+          "description": "Create a unified pricing section component that composes OneTimeServicesSection and MonthlyPackagesSection. This component will be included in the LandingPage and should apply consistent spacing and the cinematic theme throughout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Implement customer authentication UI using Internet Identity with login/logout functionality and display of customer name in header",
+      "acceptanceCriteria": [
+        "Login button is visible in the navigation header",
+        "Clicking Login triggers Internet Identity authentication",
+        "After login, the customer's name/ID is shown in the header",
+        "Logout option is available when logged in",
+        "Customer principal is stored and associated with their profile in the backend"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/LoginButton.tsx",
+          "operation": "create",
+          "description": "Create a login/logout button component using the useInternetIdentity hook from the authorization component. Display 'Login' when not authenticated and show the user's display name with a 'Logout' option when authenticated. Use the authorization component to handle Internet Identity authentication flow. Apply the cinematic theme with gold accent buttons. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ProfileSetupModal.tsx",
+          "operation": "create",
+          "description": "Create a modal component that appears after first-time login to collect the user's display name and optional email. Use the authorization component's getCallerUserProfile and saveCallerUserProfile functions to check for existing profiles and save new ones. Follow the component's pattern for preventing modal flash by properly checking actor and profile states. Apply the cinematic theme with dark modal background and gold accents."
+        },
+        {
+          "path": "frontend/src/hooks/useCustomerProfile.ts",
+          "operation": "create",
+          "description": "Create a custom hook that wraps the authorization component's useGetCallerUserProfile hook to fetch the current customer's profile. Return proper loading states that account for actor initialization to prevent UI flashing. Use React Query for caching and state management following the authorization component's pattern."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Implement an online booking form UI that opens when customers click Book Now or Subscribe, pre-fills the selected service/package, collects date and notes, and submits to the backend",
+      "acceptanceCriteria": [
+        "Clicking 'Book Now' or 'Subscribe' opens a booking form/modal",
+        "Selected service/package name is pre-filled in the form",
+        "Form collects preferred date and optional notes",
+        "Form submission calls the backend createBooking function",
+        "Success message shown after booking is created",
+        "Unauthenticated users see a prompt to log in before booking"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/BookingModal.tsx",
+          "operation": "create",
+          "description": "Create a booking modal component using shadcn/ui Dialog component. Display the pre-filled service/package name, a date picker for preferred booking date, and an optional notes textarea. Include form validation and a submit button. When the user is not authenticated, show a login prompt instead of the form. On successful submission, call the backend createBooking function and display a success message. Apply the cinematic theme with dark modal background and gold accents. Use the authorization component to check authentication state. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/hooks/useCreateBooking.ts",
+          "operation": "create",
+          "description": "Create a custom hook using React Query's useMutation to call the backend createBooking function. Handle loading, error, and success states. Return mutation function and state for use in the BookingModal component. Invalidate the customer bookings query cache on successful booking creation."
+        },
+        {
+          "path": "frontend/src/components/BookingSuccessView.tsx",
+          "operation": "create",
+          "description": "Create a success view component displayed after a booking is successfully created. Show a confirmation message with the booking details (service name, date) and a link to view all bookings in the Dashboard. Apply the cinematic theme with celebratory gold accents."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Create a customer dashboard page accessible only when logged in that displays the customer's booking history with service name, booking date, and status",
+      "acceptanceCriteria": [
+        "Dashboard is only accessible to logged-in customers",
+        "Dashboard lists all bookings made by the logged-in customer",
+        "Each booking entry shows service/package name, preferred date, and status",
+        "Empty state message shown when no bookings exist"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/BookingHistoryCard.tsx",
+          "operation": "create",
+          "description": "Create a booking history card component that displays a single booking's service name, preferred date, status (pending/confirmed/completed), and booking timestamp. Apply status-specific color coding (gold for confirmed, gray for pending, green for completed). Use the cinematic theme with dark card backgrounds."
+        },
+        {
+          "path": "frontend/src/pages/DashboardPage.tsx",
+          "operation": "create",
+          "description": "Create the customer dashboard page component that fetches and displays the logged-in customer's booking history using the getCustomerBookings backend function. Include a Header component for navigation. Show a grid of BookingHistoryCard components for each booking. Display an empty state message with an illustration when no bookings exist. Guard the page with authentication check using the authorization component - redirect to login if not authenticated. Apply the cinematic theme throughout."
+        },
+        {
+          "path": "frontend/src/hooks/useCustomerBookings.ts",
+          "operation": "create",
+          "description": "Create a custom hook using React Query to fetch the customer's bookings from the backend getCustomerBookings function. Handle loading, error, and empty states. Return bookings array and query state for use in the DashboardPage component. Use the authorization component to ensure the user is authenticated before fetching."
+        }
+      ]
+    }
+  ]
+}

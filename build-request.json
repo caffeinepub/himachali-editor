@@ -1,0 +1,206 @@
+{
+  "kind": "build_request",
+  "title": "Himachali Editor – Videography Service Website with Booking & Customer Login",
+  "projectName": "Himachali Editor",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Design a visually striking cinematic theme for the Himachali Editor website using a dark, moody color palette (deep blacks, warm golds, and mountain-inspired earthy tones), bold typography, and full-width hero sections. Apply this theme consistently across all pages and components.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero section uses a full-width cinematic layout with bold headline and tagline",
+        "Color palette consistently applies dark backgrounds, gold/amber accents, and earthy tones",
+        "Typography is bold and modern throughout all sections",
+        "Theme is consistent across landing page, pricing, and booking sections"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create a landing/home page for 'Himachali Editor' that includes a hero section with the brand name and tagline about videography shoot & editing services, a brief about section, and clear navigation to Pricing and Booking sections.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create an website naming Himachali editor For videography shoot + editing service providing"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page displays 'Himachali Editor' as the brand name prominently",
+        "Hero section includes a tagline related to videography shoot & editing services",
+        "Navigation links to Pricing and Booking sections exist",
+        "Page is responsive on mobile and desktop"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Display a One-Time Services pricing section with the following four services and their prices: Normal Video Editing + Shoot (₹4,000), High Video Editing + Shoot (₹5,000), Car Delivery Shoot (₹2,500), Bike Delivery Shoot (₹2,000). Each card should show the service name, price, and a 'Book Now' button.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Normal video editing + shoot = 4000",
+          "High video editing + shoot = 5000",
+          "Car delivery shoot = 2500",
+          "Bike delivery shoot = 2000"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Four one-time service cards are displayed",
+        "Each card shows the correct service name and price in INR",
+        "A 'Book Now' button is present on each card",
+        "Section is clearly labeled as 'One-Time Services'"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Display a Monthly Packages pricing section with three packages: Basic (8–12 videos, Normal Edit + Shoot, ₹12,000), Premium (10–15 videos, High Edit + Shoot, ₹15,000), Pro (10–15 videos, High Edit + Shoot + Social Media Management, ₹18,000). Each package card should show the package name, included deliverables, price, and a 'Subscribe' button. Visually highlight the Pro package as the most popular or recommended.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Basic package 8 to 12 videos normal edit+shoot = 12000",
+          "Premium package 10 to 15 videos high edit +shoot = 15000",
+          "Pro package 10 to 15 videos high edit + shoot + social media management = 18000"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Three monthly package cards are displayed",
+        "Each card shows the correct package name, video count range, included services, and price",
+        "Subscribe button is present on each card",
+        "Pro package is visually differentiated (e.g., badge, highlighted border)",
+        "Section is clearly labeled as 'Monthly Packages'"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement a customer authentication system using Internet Identity. Customers must be able to log in and log out. A unique customer profile/ID should be associated with their Internet Identity principal and stored in the backend.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Add online booking method with costumers id login"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Login button is visible in the navigation header",
+        "Clicking Login triggers Internet Identity authentication",
+        "After login, the customer's name/ID is shown in the header",
+        "Logout option is available when logged in",
+        "Customer principal is stored and associated with their profile in the backend"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Implement a backend data model and API for storing customer profiles. Each profile should include: principal ID, display name, email (optional), and registration timestamp.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "costumers id login"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend stores customer profiles keyed by Internet Identity principal",
+        "Profile creation is triggered on first login",
+        "Query function exists to retrieve a customer's own profile",
+        "Update function exists to update display name or email"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Implement a backend data model and API for bookings. Each booking record should include: booking ID, customer principal, service or package name, selected date, status (pending/confirmed/completed), and booking timestamp. Provide functions to create a new booking and retrieve bookings for the logged-in customer.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "online booking method"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend stores booking records with all required fields",
+        "createBooking function is callable by authenticated customers only",
+        "getMyBookings function returns only the calling customer's bookings",
+        "Booking IDs are unique and auto-generated"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Implement an online booking form UI. When a logged-in customer clicks 'Book Now' or 'Subscribe' on any service or package, a booking modal or page should open pre-filled with the selected service/package name. The form should collect preferred date, optional notes, and submit to the backend booking API. Unauthenticated users should be prompted to log in before booking.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Add online booking method with costumers id login"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking 'Book Now' or 'Subscribe' opens a booking form/modal",
+        "Selected service/package name is pre-filled in the form",
+        "Form collects preferred date and optional notes",
+        "Form submission calls the backend createBooking function",
+        "Success message shown after booking is created",
+        "Unauthenticated users see a prompt to log in before booking"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Create a customer dashboard page accessible only when logged in. It should display the customer's booking history with service name, booking date, and status for each booking.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "costumers id login"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Dashboard is only accessible to logged-in customers",
+        "Dashboard lists all bookings made by the logged-in customer",
+        "Each booking entry shows service/package name, preferred date, and status",
+        "Empty state message shown when no bookings exist"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use Internet Identity as the sole authentication method — no external OAuth providers",
+    "All backend logic must reside in the single Motoko actor in backend/main.mo",
+    "Prices must be displayed in Indian Rupees (₹)",
+    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui"
+  ],
+  "nonGoals": [
+    "Payment gateway integration (no actual online payments)",
+    "Admin dashboard for the service provider",
+    "Real-time notifications or chat",
+    "Video upload or portfolio gallery functionality",
+    "SMS or email confirmation of bookings"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Cinematic dark hero background with blurred mountain landscape and bokeh light streaks, suitable for a videography brand (hero-bg.dim_1920x1080.png)",
+      "Abstract dark textured background with subtle film grain and warm gold tones for pricing section (pricing-bg.dim_1920x600.png)",
+      "Himachali Editor brand logo — golden camera icon with stylized mountain silhouette, minimal and modern on transparent background (logo.dim_300x100.png)"
+    ],
+    "edits": []
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Himachali Editor – a videography shoot & editing service website with one-time and monthly package pricing, online booking, and customer login.",
+  "architectural_notes": [
+    "Project name: Himachali Editor – videography shoot & editing service website",
+    "Pricing in INR (₹); two tiers: one-time services and monthly packages"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Cinematic dark hero background with blurred mountain landscape and bokeh light streaks, suitable for a videography brand (hero-bg.dim_1920x1080.png)\n- Abstract dark textured background with subtle film grain and warm gold tones for pricing section (pricing-bg.dim_1920x600.png)\n- Himachali Editor brand logo — golden camera icon with stylized mountain silhouette, minimal and modern on transparent background (logo.dim_300x100.png)",
+  "existing_features": [
+    {
+      "id": "feature-design-a-visually-striking-cinematic-theme-for-the-himachali-editor-website-using-a-dark-moody-color-palette-deep-blacks-warm-golds-and-mountain-inspired-earthy-tones-bold-typography-and-full-width-hero-sections-apply-this-theme-consistently-across-all-pages-and-components",
+      "title": "Design a visually striking cinematic theme for the Himachali Editor website using a dark, moody color palette (deep blacks, warm golds, and mountain-inspired earthy tones), bold typography, and full-width hero sections. Apply this theme consistently across all pages and components.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-landing-home-page-for-himachali-editor-that-includes-a-hero-section-with-the-brand-name-and-tagline-about-videography-shoot-editing-services-a-brief-about-section-and-clear-navigation-to-pricing-and-booking-sections",
+      "title": "Create a landing/home page for 'Himachali Editor' that includes a hero section with the brand name and tagline about videography shoot & editing services, a brief about section, and clear navigation to Pricing and Booking sections.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-a-one-time-services-pricing-section-with-the-following-four-services-and-their-prices-normal-video-editing-shoot-4-000-high-video-editing-shoot-5-000-car-delivery-shoot-2-500-bike-delivery-shoot-2-000-each-card-should-show-the-service-name-price-and-a-book-now-button",
+      "title": "Display a One-Time Services pricing section with the following four services and their prices: Normal Video Editing + Shoot (₹4,000), High Video Editing + Shoot (₹5,000), Car Delivery Shoot (₹2,500), Bike Delivery Shoot (₹2,000). Each card should show the service name, price, and a 'Book Now' button.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-a-monthly-packages-pricing-section-with-three-packages-basic-8-12-videos-normal-edit-shoot-12-000-premium-10-15-videos-high-edit-shoot-15-000-pro-10-15-videos-high-edit-shoot-social-media-management-18-000-each-package-card-should-show-the-package-name-included-deliverables-price-and-a-subscribe-button-visually-highlight-the-pro-package-as-the-most-popular-or-recommended",
+      "title": "Display a Monthly Packages pricing section with three packages: Basic (8–12 videos, Normal Edit + Shoot, ₹12,000), Premium (10–15 videos, High Edit + Shoot, ₹15,000), Pro (10–15 videos, High Edit + Shoot + Social Media Management, ₹18,000). Each package card should show the package name, included deliverables, price, and a 'Subscribe' button. Visually highlight the Pro package as the most popular or recommended.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-customer-authentication-system-using-internet-identity-customers-must-be-able-to-log-in-and-log-out-a-unique-customer-profile-id-should-be-associated-with-their-internet-identity-principal-and-stored-in-the-backend",
+      "title": "Implement a customer authentication system using Internet Identity. Customers must be able to log in and log out. A unique customer profile/ID should be associated with their Internet Identity principal and stored in the backend.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-an-online-booking-form-ui-when-a-logged-in-customer-clicks-book-now-or-subscribe-on-any-service-or-package-a-booking-modal-or-page-should-open-pre-filled-with-the-selected-service-package-name-the-form-should-collect-preferred-date-optional-notes-and-submit-to-the-backend-booking-api-unauthenticated-users-should-be-prompted-to-log-in-before-booking",
+      "title": "Implement an online booking form UI. When a logged-in customer clicks 'Book Now' or 'Subscribe' on any service or package, a booking modal or page should open pre-filled with the selected service/package name. The form should collect preferred date, optional notes, and submit to the backend booking API. Unauthenticated users should be prompted to log in before booking.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-customer-dashboard-page-accessible-only-when-logged-in-it-should-display-the-customer-s-booking-history-with-service-name-booking-date-and-status-for-each-booking",
+      "title": "Create a customer dashboard page accessible only when logged in. It should display the customer's booking history with service name, booking date, and status for each booking.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Display one-time service charges: Normal edit+shoot ₹4000, High edit+shoot ₹5000, Car delivery shoot ₹2500, Bike delivery shoot ₹2000",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Display monthly packages: Basic (8-12 videos, normal edit+shoot) ₹12000, Premium (10-15 videos, high edit+shoot) ₹15000, Pro (10-15 videos, high edit+shoot + social media mgmt) ₹18000",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Online booking system with customer ID login for booking services/packages",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Implement a backend data model and API for storing customer profiles. Each profile should include: principal ID, display name, email (optional), and registration timestamp.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Implement a backend data model and API for bookings. Each booking record should include: booking ID, customer principal, service or package name, selected date, status (pending/confirmed/completed), and booking timestamp. Provide functions to create a new booking and retrieve bookings for the logged-in customer.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Himachali Editor",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
